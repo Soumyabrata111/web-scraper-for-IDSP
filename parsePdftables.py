@@ -40,11 +40,7 @@ def readPDF(filename ,headers):
 	pdfFileObj = open(filename, 'rb')
 	pdfReader = pypdf.PdfFileReader(pdfFileObj)
 	print("log: Found {} pages".format(pdfReader.numPages))
-	# pagesText = []
-	# for i in range(0, pdfReader.numPages):
-	# 	pageData = pdfReader.getPage(i)
-	# 	pageText = pageData.extractText()
-	# 	pagesText.append(pageText)
+
 
 	pagesText = map(lambda i: pdfReader.getPage(i).extractText() ,range(0, pdfReader.numPages))
 
