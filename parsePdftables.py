@@ -66,7 +66,7 @@ def readPDF(filename ,headers):
 if __name__ == '__main__':
 	if(len(sys.argv) < 3):
 		print(" Give file name: Usage example => parsePdftables.py ***.pdf ")
-	
+		exit()
 	filename = sys.argv[1]
 	outputfile = sys.argv[2]
 
